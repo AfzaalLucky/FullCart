@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using FullCart.Domain.Common;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FullCart.Domain.Entities
 {
-    public class Brand
+    public class Brand : AuditableBaseEntity
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public string? ImageUrl { get; set;}
     }
 }

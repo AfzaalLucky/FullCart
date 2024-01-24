@@ -12,4 +12,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FullCart.Application\FullCart.Application.csproj" />
+    <ProjectReference Include="..\FullCart.Infrastructure\FullCart.Infrastructure.csproj" />
+    <ProjectReference Include="..\FullCart.Persistence\FullCart.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>
