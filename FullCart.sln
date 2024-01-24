@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullCart.API", "FullCart.API\FullCart.API.csproj", "{984BD72B-F291-49E5-9E6B-E01761152619}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullCart.Application", "FullCart.Application\FullCart.Application.csproj", "{EDC8B7C9-DF9C-4079-88FA-C80A610853CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{984BD72B-F291-49E5-9E6B-E01761152619}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{984BD72B-F291-49E5-9E6B-E01761152619}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{984BD72B-F291-49E5-9E6B-E01761152619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDC8B7C9-DF9C-4079-88FA-C80A610853CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC8B7C9-DF9C-4079-88FA-C80A610853CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC8B7C9-DF9C-4079-88FA-C80A610853CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC8B7C9-DF9C-4079-88FA-C80A610853CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
