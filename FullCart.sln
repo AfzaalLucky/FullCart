@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullCart.API", "FullCart.AP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullCart.Application", "FullCart.Application\FullCart.Application.csproj", "{EDC8B7C9-DF9C-4079-88FA-C80A610853CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullCart.Domain", "FullCart.Domain\FullCart.Domain.csproj", "{604B7EC4-1A66-4680-9134-A05BF1631579}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EDC8B7C9-DF9C-4079-88FA-C80A610853CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDC8B7C9-DF9C-4079-88FA-C80A610853CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDC8B7C9-DF9C-4079-88FA-C80A610853CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{604B7EC4-1A66-4680-9134-A05BF1631579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{604B7EC4-1A66-4680-9134-A05BF1631579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{604B7EC4-1A66-4680-9134-A05BF1631579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{604B7EC4-1A66-4680-9134-A05BF1631579}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
