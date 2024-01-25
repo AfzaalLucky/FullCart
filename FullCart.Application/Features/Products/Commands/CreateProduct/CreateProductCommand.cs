@@ -5,10 +5,7 @@ using FullCart.Application.Wrappers;
 using FullCart.Domain.Entities;
 using MediatR;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FullCart.Application.Features.Products.Commands.CreateProduct
 {
@@ -23,18 +20,18 @@ namespace FullCart.Application.Features.Products.Commands.CreateProduct
         public int CategoryId { get; set; }
     }
 
-    public class CreateBrandCommandHandler : IRequestHandler<CreateBrandCommand, Response<int>>
+    public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, Response<int>>
     {
         private readonly IProductRepositoryAsync productRepositoryAsync;
         private readonly IMapper mapper;
 
-        public CreateBrandCommandHandler(IProductRepositoryAsync productRepositoryAsync, IMapper mapper)
+        public CreateProductCommandHandler(IProductRepositoryAsync productRepositoryAsync, IMapper mapper)
         {
             this.productRepositoryAsync = productRepositoryAsync;
             this.mapper = mapper;
         }
 
-        public async Task<Response<int>> Handle(CreateBrandCommand request, CancellationToken cancellationToken)
+        public async Task<Response<int>> Handle(CreateProductCommand request, CancellationToken cancellationToken)
         {
             var product = mapper.Map<Product>(request);
             await productRepositoryAsync.AddAsync(product);

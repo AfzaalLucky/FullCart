@@ -5,10 +5,7 @@ using FullCart.Application.Wrappers;
 using FullCart.Domain.Entities;
 using MediatR;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FullCart.Application.Features.Categories.Commands.CreateCategory
 {
@@ -18,18 +15,18 @@ namespace FullCart.Application.Features.Categories.Commands.CreateCategory
         public string Name { get; set; }
         public string Description { get; set; }
     }
-    public class CreateBrandCommandHandler : IRequestHandler<CreateBrandCommand, Response<int>>
+    public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryCommand, Response<int>>
     {
         private readonly ICategoryRepositoryAsync categoryRepositoryAsync;
         private readonly IMapper mapper;
 
-        public CreateBrandCommandHandler(ICategoryRepositoryAsync categoryRepositoryAsync, IMapper mapper)
+        public CreateCategoryCommandHandler(ICategoryRepositoryAsync categoryRepositoryAsync, IMapper mapper)
         {
             this.categoryRepositoryAsync = categoryRepositoryAsync;
             this.mapper = mapper;
         }
 
-        public async Task<Response<int>> Handle(CreateBrandCommand request, CancellationToken cancellationToken)
+        public async Task<Response<int>> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
         {
             var category = mapper.Map<Category>(request);
             await categoryRepositoryAsync.AddAsync(category);

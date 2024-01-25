@@ -7,20 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Brands\Commands\DeleteBrandById\" />
-    <Folder Include="Features\Brands\Commands\UpdateBrand\" />
-    <Folder Include="Features\Brands\Queries\GetAllBrands\" />
-    <Folder Include="Features\Brands\Queries\GetBrandById\" />
     <Folder Include="Features\Categories\Commands\CreateCategory\" />
-    <Folder Include="Features\Categories\Commands\DeleteCategoryById\" />
-    <Folder Include="Features\Categories\Commands\UpdateCategory\" />
-    <Folder Include="Features\Categories\Queries\GetCategoryById\" />
-    <Folder Include="Features\Categories\Queries\GetAllCategories\" />
-    <Folder Include="Features\Products\Commands\DeleteProductById\" />
-    <Folder Include="Features\Products\Commands\UpdateProduct\" />
-    <Folder Include="Features\Products\Queries\GetAllProducts\" />
-    <Folder Include="Features\Products\Queries\GetProductById\" />
-    <Folder Include="Parameters\" />
   </ItemGroup>
 
   <ItemGroup>
