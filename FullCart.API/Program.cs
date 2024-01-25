@@ -1,4 +1,7 @@
 using FullCart.API.Services;
+using FullCart.Application;
+using FullCart.Persistence;
+using FullCart.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +14,9 @@ builder.Services.AddSwaggerGen();
 
 
 // Inject Layers
-builder.Services.AddScoped<IServiceRegistration, ServiceRegistration>();
+builder.Services.AddApplicationLayer();
+builder.Services.AddPersistenceLayer(builder.Configuration);
+builder.Services.AddInfrastructureLayer(builder.Configuration);
 
 var app = builder.Build();
 

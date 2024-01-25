@@ -29,6 +29,12 @@ namespace FullCart.Application.Features.Brands.Commands.CreateBrand
 
         public async Task<Response<int>> Handle(CreateBrandCommand request, CancellationToken cancellationToken)
         {
+            //var brand = new Brand()
+            //{
+            //    Name= request.Name,
+            //    Description= request.Description,
+            //    ImageUrl= request.ImageUrl,
+            //};
             var brand = mapper.Map<Brand>(request);
             await brandRepositoryAsync.AddAsync(brand);
             return new Response<int>(brand.Id);

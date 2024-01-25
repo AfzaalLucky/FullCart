@@ -20,9 +20,9 @@ namespace FullCart.Persistence.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     LastModifiedOn = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>

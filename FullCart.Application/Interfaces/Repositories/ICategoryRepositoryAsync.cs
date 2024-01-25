@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace FullCart.Application.Interfaces.Repositories
 {
-    public interface IProductRepositoryAsync : IGenericRepositoryAsync<Product>
+    public interface ICategoryRepositoryAsync : IGenericRepositoryAsync<Category>
     {
-
     }
 }

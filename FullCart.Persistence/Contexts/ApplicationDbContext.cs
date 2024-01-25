@@ -38,6 +38,10 @@ namespace FullCart.Persistence.Contexts
                         entry.Entity.CreatedOn = dateTime.NowUtc;
                         entry.Entity.CreatedBy = "CodeDonor";
                         break;
+                    case EntityState.Modified:
+                        entry.Entity.LastModifiedOn = dateTime.NowUtc;
+                        entry.Entity.LastModifiedBy = "CodeDonor";
+                        break;
                 }
             }
             return base.SaveChangesAsync(cancellationToken);
