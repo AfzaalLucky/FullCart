@@ -25,7 +25,7 @@ namespace FullCart.Application.Features.Categories.Queries.GetAllCategories
         public async Task<PagedResponse<IEnumerable<GetAllCategoriesViewModel>>> Handle(GetAllCategoriesQuery request, CancellationToken cancellationToken)
         {
             var validFilter = mapper.Map<GetAllCategoriesParameter>(request);
-            var category = await categoryRepositoryAsync.GetPagedReponseAsync(validFilter.PageNumber, validFilter.PageSize);
+            var category = await categoryRepositoryAsync.GetPagedResponseAsync(validFilter.PageNumber, validFilter.PageSize);
             var categoryViewModel = mapper.Map<IEnumerable<GetAllCategoriesViewModel>>(category);
             return new PagedResponse<IEnumerable<GetAllCategoriesViewModel>>(categoryViewModel, validFilter.PageNumber, validFilter.PageSize);
         }

@@ -25,6 +25,8 @@ namespace FullCart.Persistence
             #region Repositories
             services.AddTransient(typeof(IGenericRepositoryAsync<>), typeof(GenericRepositoryAsync<>));
             services.AddTransient<IBrandRepositoryAsync, BrandRepositoryAsync>();
+            services.AddTransient<ICategoryRepositoryAsync, CategoryRepositoryAsync>();
+            services.AddTransient<IProductRepositoryAsync, ProductRepositoryAsync>();
             #endregion
         }
     }

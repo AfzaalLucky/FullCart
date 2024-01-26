@@ -27,7 +27,7 @@ namespace FullCart.Application.Features.Brands.Queries.GetAllBrands
         public async Task<PagedResponse<IEnumerable<GetAllBrandsViewModel>>> Handle(GetAllBrandsQuery request, CancellationToken cancellationToken)
         {
             var validFilter = mapper.Map<GetAllBrandsParameter>(request);
-            var brand = await brandRepositoryAsync.GetPagedReponseAsync(validFilter.PageNumber, validFilter.PageSize);
+            var brand = await brandRepositoryAsync.GetPagedResponseAsync(validFilter.PageNumber, validFilter.PageSize);
             var brandsViewModel = mapper.Map<IEnumerable<GetAllBrandsViewModel>>(brand);
             return new PagedResponse<IEnumerable<GetAllBrandsViewModel>>(brandsViewModel, validFilter.PageNumber, validFilter.PageSize);
         }

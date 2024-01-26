@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using FluentValidation;
+using FullCart.Application.Behaviours;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
@@ -13,7 +15,7 @@ namespace FullCart.Application
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddMediatR(m => m.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
             //services.AddMediatR(Assembly.GetExecutingAssembly());
-            //services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
         }
     }

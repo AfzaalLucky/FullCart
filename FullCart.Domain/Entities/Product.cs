@@ -16,6 +16,8 @@ namespace FullCart.Domain.Entities
         public int Quantity { get; set; }
         public int BrandId { get; set; }
         public int CategoryId { get; set; }
+        public decimal UnitPrice { get; set; }
+        public int? UnitsInStock { get; set; }
 
         // Navigation Properties
         public Brand Brand { get; set; }

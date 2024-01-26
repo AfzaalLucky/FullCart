@@ -5,28 +5,29 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Configuration;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FullCart.Persistence.Contexts
 {
     public class ApplicationDbContext : DbContext
     {
         private readonly IDateTimeService dateTime;
+        private readonly IAuthenticatedUserService authenticatedUser;
 
         public ApplicationDbContext()
         {
-
+            //
         }
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IDateTimeService dateTime) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IDateTimeService dateTime, IAuthenticatedUserService authenticatedUser) : base(options)
         {
             ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
             this.dateTime = dateTime;
+            this.authenticatedUser = authenticatedUser;
         }
 
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
@@ -36,11 +37,13 @@ namespace FullCart.Persistence.Contexts
                 {
                     case EntityState.Added:
                         entry.Entity.CreatedOn = dateTime.NowUtc;
-                        entry.Entity.CreatedBy = "CodeDonor";
+                        entry.Entity.CreatedBy = authenticatedUser.UserId;
+                        //entry.Entity.CreatedBy = "CodeDonor";
                         break;
                     case EntityState.Modified:
                         entry.Entity.LastModifiedOn = dateTime.NowUtc;
-                        entry.Entity.LastModifiedBy = "CodeDonor";
+                        entry.Entity.CreatedBy = authenticatedUser.UserId;
+                        //entry.Entity.LastModifiedBy = "CodeDonor";
                         break;
                 }
             }

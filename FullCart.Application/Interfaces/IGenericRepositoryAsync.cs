@@ -9,6 +9,7 @@ namespace FullCart.Application.Interfaces
         Task<T> GetByIdAsync(int id);
         Task UpdateAsync(T entity);
         Task DeleteAsync(T entity);
-        Task<IReadOnlyList<T>> GetPagedReponseAsync(int pageNumber, int pageSize);
+        Task<IReadOnlyList<T>> GetPagedResponseAsync(int pageNumber, int pageSize);
+        Task<IReadOnlyList<T>> GetAllAsync();
     }
 }
